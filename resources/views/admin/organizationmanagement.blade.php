@@ -79,70 +79,80 @@
                                 {{ session('status') }}
                             </div>
                         @endif
+                        <style>
+                            /* .w-10p {
+                                                                                    width: 10% !important;
+                                                                                } */
+                        </style>
                         <div class="table-responsive p-0">
                             <table class="table align-items-center mb-0">
-                                <thead>
+                                <thead class="text-primary text-xxxxs font-weight-bolder opacity-7">
                                     <tr>
-                                        <th class="text-center text-primary text-xxxxs font-weight-bolder opacity-7">
+                                        <th class="w-10p text-center">
                                             ID</th>
-                                        <th class="text-primary text-xxxxs font-weight-bolder opacity-7 ps-2">
+                                        <th class="w-10p ps-2">
                                             Name</th>
-                                        <th class="text-primary text-xxxxs font-weight-bolder opacity-7 ps-2">
-                                            Description</th>
-                                        <th class="text-primary text-xxxxs font-weight-bolder opacity-7 ps-2">
+                                        <th class="w-10p ps-2">
                                             Image</th>
-                                        <th class="text-primary text-xxxxs font-weight-bolder opacity-7 ps-2">
+                                        <th class="w-10p ps-2">
+                                            Description</th>
+                                        <th class="w-10p ps-2">
                                             Telephone</th>
-                                        <th class="text-primary text-xxxxs font-weight-bolder opacity-7 ps-2">
+                                        <th class="w-10p ps-2">
                                             Location</th>
-                                        <th class="text-primary text-xxxxs font-weight-bolder opacity-7 ps-2">
+                                        <th class="w-10p ps-2">
                                             Street</th>
-                                        <th class="text-primary text-xxxxs font-weight-bolder opacity-7 ps-2">
+                                        <th class="w-10p ps-2">
                                             Email</th>
-                                        <th class="text-primary text-xxxxs font-weight-bolder opacity-7 ps-2">
+                                        <th class="w-10p ps-2">
                                             Website</th>
                                         <th class="text-primary opacity-7"></th>
                                         <th class="text-primary opacity-7"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($organizations as $key){?>
-                                    <tr>
-                                        <td class="align-middle text-center text-sm">
-                                            <?php echo $key->id; ?>
-                                        </td>
-                                        <td class="align-middle text-sm">
-                                            <?php echo $key->name; ?>
-                                        </td>
-                                        <td class="align-middle text-sm">
-                                            <?php echo $key->description; ?>
-                                        </td>
-                                        <td class="align-middle text-sm">
-                                            <?php echo $key->image; ?>
-                                        </td>
-                                        <td class="align-middle text-sm">
-                                            <?php echo $key->telephone; ?>
-                                        </td>
-                                        <td class="align-middle text-sm">
-                                            <?php echo $key->location; ?>
-                                        </td>
-                                        <td class="align-middle text-sm">
-                                            <?php echo $key->street; ?>
-                                        </td>
-                                        <td class="align-middle text-sm">
-                                            <?php echo $key->email; ?>
-                                        </td>
-                                        <td class="align-middle text-sm">
-                                            <?php echo $key->website; ?>
-                                        </td>
-                                        <td class="align-middle text-sm">
-                                            <button type="submit" class="btn btn-success my-2">Edit</button>
-                                        </td>
-                                        <td class="align-middle text-sm">
-                                            <button type="submit" class="btn btn-danger my-2 me-3">DELETE</button>
-                                        </td>
-                                    </tr>
-                                    <?php }?>
+                                    @foreach ($organizations as $data)
+                                        <tr>
+                                            <td class="align-middle text-center text-sm">
+                                                {{ $data->id }}
+                                            </td>
+                                            <td class="align-middle text-sm">
+                                                {{ $data->name }}
+                                            </td>
+                                            <td class="align-middle text-sm">
+                                                {{ $data->image }}
+                                            </td>
+                                            <td class="align-middle text-sm">
+                                                {{-- <div style="height: 80px; overflow: hidden;"> --}}
+                                                {{ $data->description }}
+                                                {{-- </div> --}}
+                                            </td>
+                                            <td class="align-middle text-sm">
+                                                {{ $data->telephone }}
+                                            </td>
+                                            <td class="align-middle text-sm">
+                                                {{ $data->location }}
+                                            </td>
+                                            <td class="align-middle text-sm">
+                                                {{ $data->street }}
+                                            </td>
+                                            <td class="align-middle text-sm">
+                                                {{ $data->email }}
+                                            </td>
+                                            <td class="align-middle text-sm">
+                                                {{ $data->website }}
+                                            </td>
+                                            <td class="align-middle text-sm">
+                                                {{-- <button type="submit" class="btn btn-success my-2">Edit</button> --}}
+                                                <a href="{{ url('organization-management/' . $data->id) }}"
+                                                    class="btn btn-success my-2">EDIT</a>
+                                            </td>
+                                            <td class="align-middle text-sm">
+                                                {{-- <button type="submit" class="btn btn-danger my-2 me-3">DELETE</button> --}}
+                                                <a href="#" class="btn btn-danger my-2 me-3">DELETE</a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
