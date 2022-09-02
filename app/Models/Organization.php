@@ -10,5 +10,5 @@ class Organization extends Model
     //use HasFactory;
 
     protected $table = 'organizations';
-    protected $fillable = ['name', 'description', 'telephone', 'location', 'street', 'email', 'website'];
+    protected $fillable = ['name', 'description', 'telephone', 'location', 'street', 'email', 'website', 'image'];
 }

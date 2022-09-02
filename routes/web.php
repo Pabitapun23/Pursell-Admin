@@ -30,4 +30,5 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/user-manage', [App\Http\Controllers\Admin\UserManageController::class, 'userData']);
     Route::get('/post-management', [App\Http\Controllers\Admin\PostManagementController::class, 'postData']);
     Route::get('/organization-management', [App\Http\Controllers\Admin\OrganizationManagementController::class, 'orgData']);
+    Route::post('/save-organization', [App\Http\Controllers\Admin\OrganizationManagementController::class, 'store']);
 });

@@ -9,52 +9,56 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Add Organization</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <form>
+                <form action="/save-organization" method="POST">
+                    {{ csrf_field() }}
+
+                    <div class="modal-body px-3">
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Name:</label>
-                            <input type="text" class="form-control border" id="recipient-name">
-                        </div>
-                        <div class="form-group">
-                            <label for="message-text" class="col-form-label">Description:</label>
-                            <textarea class="form-control border" id="message-text"></textarea>
+                            <input type="text" name="name" class="form-control border px-2" id="recipient-name">
                         </div>
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Image:</label><br>
-                            <input type="text" name="image" class="form-control border" id="recipient-name">
+                            <input type="text" name="image" class="form-control border px-2" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Description:</label>
+                            <textarea type="description" name="description" class="form-control border px-2" id="message-text"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Telephone:</label>
-                            <input type="text" class="form-control border" id="recipient-name">
+                            <input type="text" name="telephone" class="form-control border px-2" id="recipient-name">
                         </div>
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Location:</label>
-                            <input type="text" class="form-control border" id="recipient-name">
+                            <input type="text" name="location" class="form-control border px-2" id="recipient-name">
                         </div>
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Street:</label>
-                            <input type="text" class="form-control border" id="recipient-name">
+                            <input type="text" name="street" class="form-control border px-2" id="recipient-name">
                         </div>
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Email:</label>
-                            <input type="text" class="form-control border" id="recipient-name">
+                            <input type="text" name="email" class="form-control border px-2" id="recipient-name">
                         </div>
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Website:</label>
-                            <input type="text" class="form-control border" id="recipient-name">
+                            <input type="text" name="website" class="form-control border px-2" id="recipient-name">
                         </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save</button>
-                </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+
 
     <div class="container-fluid">
         <div class="row">
@@ -67,10 +71,14 @@
                                     data-bs-target="#exampleModal">ADD</button>
                                 {{-- <button type="button" class="btn btn-white float-end me-3">Add</button> --}}
                             </h6>
-
                         </div>
                     </div>
                     <div class="card-body px-0 pb-2">
+                        @if (session('status'))
+                            <div class="alert alert-success text-white" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
                         <div class="table-responsive p-0">
                             <table class="table align-items-center mb-0">
                                 <thead>
