@@ -53,7 +53,14 @@ class OrganizationManagementController extends Controller
 
         $organizations->update();
 
-        // return redirect('/organization-management')->with('status', 'Data updated for organizations');
         return redirect('/organization-management')->with(['status' => 'Data updated for the organization']);
+    }
+
+    public function delete($id)
+    {
+        $organizations = Organization::findOrFail($id);
+        $organizations->delete();
+
+        return redirect('/organization-management')->with(['status' => 'Datas of the organization are deleted']);
     }
 }

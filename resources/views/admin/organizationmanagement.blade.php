@@ -81,8 +81,8 @@
                         @endif
                         <style>
                             /* .w-10p {
-                                                                                    width: 10% !important;
-                                                                                } */
+                                                                                            width: 10% !important;
+                                                                                        } */
                         </style>
                         <div class="table-responsive p-0">
                             <table class="table align-items-center mb-0">
@@ -148,8 +148,14 @@
                                                     class="btn btn-success my-2">EDIT</a>
                                             </td>
                                             <td class="align-middle text-sm">
-                                                {{-- <button type="submit" class="btn btn-danger my-2 me-3">DELETE</button> --}}
-                                                <a href="#" class="btn btn-danger my-2 me-3">DELETE</a>
+                                                <form action="{{ url('organization-management-delete/' . $data->id) }}"
+                                                    method="POST">
+                                                    {{ csrf_field() }}
+                                                    {{ method_field('DELETE') }}
+
+                                                    <button type="submit"
+                                                        class="btn btn-danger my-2 me-3">DELETE</button>
+                                                </form>
                                             </td>
                                         </tr>
                                     @endforeach

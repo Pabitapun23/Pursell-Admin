@@ -34,4 +34,5 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::post('/save-organization', [App\Http\Controllers\Admin\OrganizationManagementController::class, 'store']);
     Route::get('/organization-management/{id}', [App\Http\Controllers\Admin\OrganizationManagementController::class, 'edit']);
     Route::put('/organization-management-update/{id}', [App\Http\Controllers\Admin\OrganizationManagementController::class, 'update']);
+    Route::delete('/organization-management-delete/{id}', [App\Http\Controllers\Admin\OrganizationManagementController::class, 'delete']);
 });
