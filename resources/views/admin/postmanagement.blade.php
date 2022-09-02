@@ -75,9 +75,9 @@
                             </table>
                         </div>
                     </div>
-                    {{-- <span>
+                    <span>
                         {{ $posts->links() }}
-                    </span> --}}
+                    </span>
                 </div>
             </div>
         </div>

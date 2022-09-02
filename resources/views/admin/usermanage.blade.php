@@ -54,9 +54,9 @@
                             </table>
                         </div>
                     </div>
-                    {{-- <span>
+                    <span>
                         {{ $users->links() }}
-                    </span> --}}
+                    </span>
                 </div>
             </div>
         </div>

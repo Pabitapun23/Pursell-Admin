@@ -10,7 +10,7 @@ class OrganizationManagementController extends Controller
 {
     public function orgData()
     {
-        $organizations  = Organization::all();
+        $organizations  = Organization::paginate(5);
 
         return view('admin.organizationmanagement')->with('organizations', $organizations);
     }

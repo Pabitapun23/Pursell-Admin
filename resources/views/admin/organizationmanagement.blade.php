@@ -81,8 +81,8 @@
                         @endif
                         <style>
                             /* .w-10p {
-                                                                                            width: 10% !important;
-                                                                                        } */
+                                                                                                    width: 10% !important;
+                                                                                                } */
                         </style>
                         <div class="table-responsive p-0">
                             <table class="table align-items-center mb-0">
@@ -163,6 +163,9 @@
                             </table>
                         </div>
                     </div>
+                    <span>
+                        {{ $organizations->links() }}
+                    </span>
                 </div>
             </div>
         </div>
