@@ -15,6 +15,11 @@
                         </div>
                     </div>
                     <div class="card-body px-0 pb-2">
+                        @if (session('status'))
+                            <div class="alert alert-success text-white" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
                         <div class="table-responsive p-0">
                             <table class="table mb-0">
                                 <thead>
@@ -40,37 +45,43 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($posts as $key){?>
-                                    <tr>
-                                        <td class="align-middle text-center text-sm">
-                                            <?php echo $key->id; ?>
-                                        </td>
-                                        <td class="align-middle text-sm">
-                                            <?php echo $key->title; ?>
-                                        </td>
-                                        <td class="align-middle text-sm">
-                                            <?php echo $key->category->name; ?>
-                                        </td>
-                                        <td class="align-middle text-sm">
-                                            <?php echo $key->user->name; ?>
-                                        </td>
-                                        <td class="align-middle text-sm">
-                                            <?php echo $key->address; ?>
-                                        </td>
-                                        <td class="align-middle text-sm">
-                                            <?php echo $key->description; ?>
-                                        </td>
-                                        <td class="align-middle text-sm">
-                                            <?php echo $key->price; ?>
-                                        </td>
-                                        <td class="align-middle text-sm">
-                                            <?php echo $key->expirydate; ?>
-                                        </td>
-                                        <td class="align-middle text-sm">
-                                            <button type="submit" class="btn btn-danger my-2 me-3">DELETE</button>
-                                        </td>
-                                    </tr>
-                                    <?php }?>
+                                    @foreach ($posts as $data)
+                                        <tr>
+                                            <td class="align-middle text-center text-sm">
+                                                {{ $data->id }}
+                                            </td>
+                                            <td class="align-middle text-sm">
+                                                {{ $data->title }}
+                                            </td>
+                                            <td class="align-middle text-sm">
+                                                {{ $data->category->name }}
+                                            </td>
+                                            <td class="align-middle text-sm">
+                                                {{ $data->user->name }}
+                                            </td>
+                                            <td class="align-middle text-sm">
+                                                {{ $data->address }}
+                                            </td>
+                                            <td class="align-middle text-sm">
+                                                {{ $data->description }}
+                                            </td>
+                                            <td class="align-middle text-sm">
+                                                {{ $data->price }}
+                                            </td>
+                                            <td class="align-middle text-sm">
+                                                {{ $data->expirydate }}
+                                            </td>
+                                            <td class="align-middle text-sm">
+                                                <form action="{{ url('post-management-delete/' . $data->id) }}"
+                                                    method="POST">
+                                                    {{ csrf_field() }}
+                                                    {{ method_field('DELETE') }}
+
+                                                    <button type="submit" class="btn btn-danger my-2 me-3">DELETE</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

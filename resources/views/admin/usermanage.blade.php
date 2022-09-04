@@ -45,8 +45,27 @@
                                         <td class="align-middle text-sm">
                                             <?php echo $key->phoneno; ?>
                                         </td>
-                                        <td class="align-middle text-sm">
+                                        {{-- <td class="align-middle text-sm">
                                             <button type="submit" class="btn btn-danger my-2 me-3">BLOCK</button>
+                                        </td> --}}
+
+                                        <td>
+                                            <form action="{{ url('user-manage-block/' . $key->id) }}" method="POST">
+                                                {{ csrf_field() }}
+                                                {{ method_field('POST') }}
+                                                <input id="userId" name="id" type="hidden"
+                                                    value="<?php echo $key->id; ?>" />
+                                                <button type="submit"
+                                                    class="<?php if ($key->block_status == false) {
+                                                        echo 'btn btn-danger';
+                                                    } else {
+                                                        echo 'btn btn-success';
+                                                    } ?>"><?php if ($key->block_status == false) {
+                                                        echo 'Block';
+                                                    } else {
+                                                        echo 'UnBlock';
+                                                    } ?></button>
+                                            </form>
                                         </td>
                                     </tr>
                                     <?php }?>

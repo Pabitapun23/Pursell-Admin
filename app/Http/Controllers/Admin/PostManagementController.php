@@ -16,4 +16,13 @@ class PostManagementController extends Controller
         return view('admin.postmanagement')
             ->with('posts', $posts);
     }
+
+    public function deletePost($id)
+    {
+        $posts = Post::findOrFail($id);
+
+        $posts->delete();
+
+        return redirect('/post-management')->with(['status' => 'Datas of the post are deleted']);
+    }
 }

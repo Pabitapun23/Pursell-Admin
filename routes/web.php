@@ -28,7 +28,10 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     });
 
     Route::get('/user-manage', [App\Http\Controllers\Admin\UserManageController::class, 'userData']);
+    Route::post('/user-manage-block/{id}', [App\Http\Controllers\Admin\UserManageController::class, 'blockUser']);
+
     Route::get('/post-management', [App\Http\Controllers\Admin\PostManagementController::class, 'postData']);
+    Route::delete('/post-management-delete/{id}', [App\Http\Controllers\Admin\PostManagementController::class, 'deletePost']);
 
     Route::get('/organization-management', [App\Http\Controllers\Admin\OrganizationManagementController::class, 'orgData']);
     Route::post('/save-organization', [App\Http\Controllers\Admin\OrganizationManagementController::class, 'store']);
