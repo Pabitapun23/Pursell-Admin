@@ -27,7 +27,7 @@ class UserManageController extends Controller
         } else {
             User::where('id', $request->input('id'))->update(['block_status' => 1]);
             $blockamount = $block_status = User::where('id', $request->input('id'))->get()->pluck('block_amount');
-            if ($blockamount[0] == 4) {
+            if ($blockamount[0] == 1) {
                 $users = User::findOrFail($request->input('id'));
                 $users->delete();
             } else {

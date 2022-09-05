@@ -8,7 +8,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <div class="card my-4">
+                <div class="card my-2">
                     <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                         <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
                             <h6 class="text-white text-capitalize ps-3">User Management table</h6>
@@ -31,44 +31,40 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($users as $key){?>
-                                    <tr>
-                                        <td class="align-middle text-center text-sm">
-                                            <?php echo $key->id; ?>
-                                        </td>
-                                        <td class="align-middle text-sm">
-                                            <?php echo $key->name; ?>
-                                        </td>
-                                        <td class="align-middle text-sm">
-                                            <?php echo $key->email; ?>
-                                        </td>
-                                        <td class="align-middle text-sm">
-                                            <?php echo $key->phoneno; ?>
-                                        </td>
-                                        {{-- <td class="align-middle text-sm">
-                                            <button type="submit" class="btn btn-danger my-2 me-3">BLOCK</button>
-                                        </td> --}}
-
-                                        <td>
-                                            <form action="{{ url('user-manage-block/' . $key->id) }}" method="POST">
-                                                {{ csrf_field() }}
-                                                {{ method_field('POST') }}
-                                                <input id="userId" name="id" type="hidden"
-                                                    value="<?php echo $key->id; ?>" />
-                                                <button type="submit"
-                                                    class="<?php if ($key->block_status == false) {
-                                                        echo 'btn btn-danger';
-                                                    } else {
-                                                        echo 'btn btn-success';
-                                                    } ?>"><?php if ($key->block_status == false) {
-                                                        echo 'Block';
-                                                    } else {
-                                                        echo 'UnBlock';
-                                                    } ?></button>
-                                            </form>
-                                        </td>
-                                    </tr>
-                                    <?php }?>
+                                    @foreach ($users as $key)
+                                        <tr>
+                                            <td class="align-middle text-center text-sm">
+                                                {{ $key->id }}
+                                            </td>
+                                            <td class="align-middle text-sm">
+                                                {{ $key->name }}
+                                            </td>
+                                            <td class="align-middle text-sm">
+                                                {{ $key->email }}
+                                            </td>
+                                            <td class="align-middle text-sm">
+                                                {{ $key->phoneno }}
+                                            </td>
+                                            <td>
+                                                <form action="{{ url('user-manage-block/' . $key->id) }}" method="POST">
+                                                    {{ csrf_field() }}
+                                                    {{ method_field('POST') }}
+                                                    <input id="userId" name="id" type="hidden"
+                                                        value="{{ $key->id }}" />
+                                                    <button type="submit"
+                                                        class="<?php if ($key->block_status == false) {
+                                                            echo 'btn btn-danger my-2';
+                                                        } else {
+                                                            echo 'btn btn-success my-2';
+                                                        } ?>"><?php if ($key->block_status == false) {
+                                                            echo 'Block';
+                                                        } else {
+                                                            echo 'UnBlock';
+                                                        } ?></button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

@@ -22,7 +22,7 @@
     <!-- CSS Files -->
     <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
 
-      <link rel="stylesheet" href="{{ asset('assets/css/dataTables.min.css') }}" >
+    <link rel="stylesheet" href="{{ asset('assets/css/dataTables.min.css') }}">
 </head>
 
 <body class="g-sidenav-show  bg-gray-200">
@@ -102,7 +102,7 @@
         <!-- Navbar -->
         <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
             data-scroll="true">
-            <div class="container-fluid py-1 px-3">
+            <div class="container-fluid px-3">
                 <div class="collapse navbar-collapse justify-content-end">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
@@ -140,7 +140,7 @@
             </div>
 
             {{-- Footer --}}
-            <footer class="footer py-4  ">
+            <footer class="footer py-2">
                 <div class="container-fluid">
                     <div class="row align-items-center justify-content-lg-between">
                         <div class="col-lg-6 mb-lg-0 mb-4">

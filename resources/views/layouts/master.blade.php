@@ -101,7 +101,7 @@
         <!-- Navbar -->
         <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
             data-scroll="true">
-            <div class="container-fluid py-1 px-3">
+            <div class="container-fluid px-3">
                 <nav aria-label="breadcrumb">
                     <h6 class="font-weight-bolder mb-0">Dashboard</h6>
                 </nav>
@@ -143,7 +143,7 @@
             </div>
 
             {{-- Footer --}}
-            <footer class="footer py-4  ">
+            <footer class="footer">
                 <div class="container-fluid">
                     <div class="row align-items-center justify-content-lg-between">
                         <div class="col-lg-6 mb-lg-0 mb-4">
