@@ -21,7 +21,8 @@
                         </div>
                     @endif
                     <div class="card-body px-0 pb-2">
-                        <form action="{{ url('organization-management-update/' . $organizations->id) }}" method="POST">
+                        <form action="{{ url('organization-management-update/' . $organizations->id) }}" method="POST"
+                            enctype="multipart/form-data">
                             {{ csrf_field() }}
                             {{ method_field('PUT') }}
 
@@ -33,8 +34,9 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">Image:</label><br>
-                                    <input type="text" name="image" class="form-control border px-2"
-                                        value="{{ $organizations->image }}">
+                                    <input type="file" name="image" class="form-control border px-2">
+                                    <img src="{{ asset('images/' . $organizations->image) }}" width="70px" height="70px"
+                                        alt="Image">
                                 </div>
                                 <div class="form-group">
                                     <label for="message-text" class="col-form-label">Description:</label>
