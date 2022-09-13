@@ -11,7 +11,7 @@ class PostManagementController extends Controller
 {
     public function postData()
     {
-        $posts = Post::with(['user', 'category'])->paginate(5);
+        $posts = Post::with(['user', 'category'])->orderBy('id', 'desc')->paginate(5);
 
         return view('admin.postmanagement')
             ->with('posts', $posts);

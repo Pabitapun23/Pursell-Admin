@@ -12,17 +12,16 @@
                     <div class="card-header p-3 pt-2">
                         <div
                             class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-                            <i class="material-icons opacity-10">weekend</i>
+                            <i class="material-icons opacity-10">person</i>
                         </div>
                         <div class="text-end pt-1">
-                            <p class="text-sm mb-0 text-capitalize">Today's Money</p>
-                            <h4 class="mb-0">$53k</h4>
+                            <p class="text-sm mb-0 text-capitalize">User</p>
+                            <h4 class="mb-0">53k</h4>
                         </div>
                     </div>
                     <hr class="dark horizontal my-0">
                     <div class="card-footer p-3">
-                        <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+55% </span>than
-                            last week</p>
+                        <p class="mb-0"><span class="text-success text-sm font-weight-bolder"></span>No. of users</p>
                     </div>
                 </div>
             </div>
@@ -31,17 +30,16 @@
                     <div class="card-header p-3 pt-2">
                         <div
                             class="icon icon-lg icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute">
-                            <i class="material-icons opacity-10">person</i>
+                            <i class="material-icons opacity-10">post_add</i>
                         </div>
                         <div class="text-end pt-1">
-                            <p class="text-sm mb-0 text-capitalize">Today's Users</p>
+                            <p class="text-sm mb-0 text-capitalize">Posts</p>
                             <h4 class="mb-0">2,300</h4>
                         </div>
                     </div>
                     <hr class="dark horizontal my-0">
                     <div class="card-footer p-3">
-                        <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+3% </span>than
-                            last month</p>
+                        <p class="mb-0"><span class="text-success text-sm font-weight-bolder"></span>No. of posts</p>
                     </div>
                 </div>
             </div>
@@ -50,17 +48,17 @@
                     <div class="card-header p-3 pt-2">
                         <div
                             class="icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute">
-                            <i class="material-icons opacity-10">person</i>
+                            <i class="material-icons opacity-10">people</i>
                         </div>
                         <div class="text-end pt-1">
-                            <p class="text-sm mb-0 text-capitalize">New Clients</p>
+                            <p class="text-sm mb-0 text-capitalize">Organizations</p>
                             <h4 class="mb-0">3,462</h4>
                         </div>
                     </div>
                     <hr class="dark horizontal my-0">
                     <div class="card-footer p-3">
-                        <p class="mb-0"><span class="text-danger text-sm font-weight-bolder">-2%</span> than
-                            yesterday</p>
+                        <p class="mb-0"><span class="text-danger text-sm font-weight-bolder"></span> No. of organizations
+                        </p>
                     </div>
                 </div>
             </div>
@@ -69,17 +67,17 @@
                     <div class="card-header p-3 pt-2">
                         <div
                             class="icon icon-lg icon-shape bg-gradient-info shadow-info text-center border-radius-xl mt-n4 position-absolute">
-                            <i class="material-icons opacity-10">weekend</i>
+                            <i class="material-icons opacity-10">category</i>
                         </div>
                         <div class="text-end pt-1">
-                            <p class="text-sm mb-0 text-capitalize">Sales</p>
-                            <h4 class="mb-0">$103,430</h4>
+                            <p class="text-sm mb-0 text-capitalize">Categories</p>
+                            <h4 class="mb-0">103,430</h4>
                         </div>
                     </div>
                     <hr class="dark horizontal my-0">
                     <div class="card-footer p-3">
-                        <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+5% </span>than
-                            yesterday</p>
+                        <p class="mb-0"><span class="text-success text-sm font-weight-bolder"></span>No. of Categories
+                        </p>
                     </div>
                 </div>
             </div>
@@ -136,7 +134,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <h6 class="mb-0 ">Completed Tasks</h6>
+                        <h6 class="mb-0 ">Posts Added</h6>
                         <p class="text-sm ">Last Campaign Performance</p>
                         <hr class="dark horizontal">
                         <div class="d-flex ">

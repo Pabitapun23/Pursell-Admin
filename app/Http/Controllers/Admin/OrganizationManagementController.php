@@ -11,7 +11,7 @@ class OrganizationManagementController extends Controller
 {
     public function orgData()
     {
-        $organizations  = Organization::paginate(5);
+        $organizations  = Organization::orderBy('id', 'desc')->paginate(5);
 
         return view('admin.organizationmanagement')->with('organizations', $organizations);
     }

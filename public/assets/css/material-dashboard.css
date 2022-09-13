@@ -25541,10 +25541,11 @@ body:not(.dark-version)
 
 .nav.nav-pills .nav-link.active {
     animation: 0.2s ease;
+    background-color: #0057f7;
 }
 
 .nav.nav-pills .nav-link:hover:not(.active) {
-    color: #344767;
+    color: #346745;
 }
 
 .nav.nav-pills.nav-pills-primary {
@@ -25640,12 +25641,13 @@ body:not(.dark-version)
 }
 
 .moving-tab .nav-link:hover:not(.active) {
-    color: #344767;
+    color: #dde3ee;
 }
 
 .page-item.active .page-link {
     box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.09),
         0 2px 3px -1px rgba(0, 0, 0, 0.07);
+    color: white;
 }
 
 .page-item .page-link,

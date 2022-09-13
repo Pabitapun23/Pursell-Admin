@@ -11,11 +11,30 @@ class UserManageController extends Controller
 {
     public function userData()
     {
-        $users  = DB::table('users')->where('role', '0')->paginate(5);
+        $users  = User::withCount('report_user as report_count')->where('role', '0')->orderBy('id', 'desc')->get();
+        //$user_id = $users->id;
+
+        //dd($user_id);
+
+        //$report_user = ReportUser::where('user_id', $users->id)->get();
 
         //$users = User::all();
-        return view('admin.usermanage')
-            ->with('users', $users);
+
+        // $users = DB::table('users')
+        //     ->join('report_users', 'users.id', '=', 'report_users.user_id')
+        //     ->select('users.name', 'report_users.user_id', DB::raw('count(report_users.user_id) as total'))
+        //     ->groupBy('report_users.user_id')->get();
+
+
+        // $users = DB::table('report_users')
+        //     ->select('users.*', DB::raw('count(report_users.user_id) as totalcount'))
+        //     ->join('users', 'users.id', '=', 'report_users.user_id')
+        //     ->groupBy('report_users.user_id')
+        //     ->get();
+
+
+        //dd($report_user);
+        return view('admin.usermanage', ['users' => $users]);
     }
 
     public function blockUser(Request $request)

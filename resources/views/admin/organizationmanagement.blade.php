@@ -52,7 +52,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="submit" class="btn" style="background-color: #E60000; color: white;">Save</button>
                     </div>
                 </form>
             </div>
@@ -65,7 +65,7 @@
             <div class="col-12">
                 <div class="card my-1">
                     <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-                        <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                        <div class="shadow-primary border-radius-lg pt-4 pb-3" style="background-color: #E60000">
                             <h6 class="text-white text-capitalize ps-3">Organization Management table &nbsp;
                                 <button type="button" class="btn btn-white float-end me-3" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal">ADD</button>
@@ -81,12 +81,12 @@
                         @endif
                         <style>
                             /* .w-10p {
-                                                                                                                                                                                            width: 10% !important;
-                                                                                                                                                                                        } */
+                                            width: 10% !important;
+                                        } */
                         </style>
                         <div class="table-responsive p-0">
                             <table class="table align-items-center mb-0">
-                                <thead class="text-primary text-xxxxs font-weight-bolder opacity-7">
+                                <thead class="text-xxxxs font-weight-bolder opacity-7" style="color: #E60000">
                                     <tr>
                                         <th class="w-10p text-center">
                                             ID</th>
@@ -106,8 +106,8 @@
                                             Email</th>
                                         <th class="w-10p ps-2">
                                             Website</th>
-                                        <th class="text-primary opacity-7"></th>
-                                        <th class="text-primary opacity-7"></th>
+                                        <th class="opacity-7"></th>
+                                        <th class="opacity-7"></th>
                                     </tr>
                                 </thead>
                                 <tbody>

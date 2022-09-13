@@ -10,7 +10,7 @@
             <div class="col-12">
                 <div class="card my-2">
                     <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-                        <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                        <div class="shadow-primary border-radius-lg pt-4 pb-3" style="background-color: #E60000">
                             <h6 class="text-white text-capitalize ps-3">Posts Management table</h6>
                         </div>
                     </div>
@@ -23,24 +23,24 @@
                         <div class="table-responsive p-0">
                             <table class="table mb-0">
                                 <thead>
-                                    <tr>
-                                        <th class="text-center text-primary text-xxxxs font-weight-bolder opacity-7">
+                                    <tr class="text-xxxxs font-weight-bolder opacity-7" style="color: #E60000">
+                                        <th class="text-center">
                                             ID</th>
-                                        <th class="text-primary text-xxxxs font-weight-bolder opacity-7 ps-2">
+                                        <th class="ps-2">
                                             Title</th>
-                                        <th class="text-primary text-xxxxs font-weight-bolder opacity-7 ps-2">
+                                        <th class="ps-2">
                                             Category</th>
-                                        <th class="text-primary text-xxxxs font-weight-bolder opacity-7 ps-2">
+                                        <th class="ps-2">
                                             Username</th>
-                                        <th class="text-primary text-xxxxs font-weight-bolder opacity-7 ps-2">
+                                        <th class="ps-2">
                                             Address</th>
-                                        <th class="text-primary text-xxxxs font-weight-bolder opacity-7 ps-2">
+                                        <th class="ps-2">
                                             Description</th>
-                                        <th class="text-primary text-xxxxs font-weight-bolder opacity-7 ps-2">
+                                        <th class="ps-2">
                                             Price</th>
-                                        <th class="text-primary text-xxxxs font-weight-bolder opacity-7 ps-2">
+                                        <th class="ps-2">
                                             ExpiryDate</th>
-                                        <th class="text-primary opacity-7">
+                                        <th class="ps-2">
                                         </th>
                                     </tr>
                                 </thead>

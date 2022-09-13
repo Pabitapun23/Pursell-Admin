@@ -21,6 +21,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <!-- CSS Files -->
     <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
+    <link href="../assets/css/main.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="{{ asset('assets/css/dataTables.min.css') }}">
 </head>
@@ -50,10 +51,10 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark {{ 'user-manage' == request()->path() ? 'active' : '' }} "
+                    <a class="nav-link text-dark {{ 'user-manage' == request()->path() ? 'active primary' : '' }}"
                         href="/user-manage">
                         <div class="text-black text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons opacity-10">table_view</i>
+                            <i class="material-icons opacity-10">person</i>
                         </div>
                         <span class="nav-link-text ms-1">User Manage</span>
                     </a>
@@ -62,7 +63,7 @@
                     <a class="nav-link text-dark {{ 'post-management' == request()->path() ? 'active' : '' }}"
                         href="/post-management">
                         <div class="text-black text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons opacity-10">receipt_long</i>
+                            <i class="material-icons opacity-10">post_add</i>
                         </div>
                         <span class="nav-link-text ms-1">Post Management</span>
                     </a>
@@ -71,21 +72,12 @@
                     <a class="nav-link text-dark {{ 'organization-management' == request()->path() ? 'active' : '' }}"
                         href="/organization-management">
                         <div class="text-black text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons opacity-10">view_in_ar</i>
+                            <i class="material-icons opacity-10">people</i>
                         </div>
                         <span class="nav-link-text ms-1">Organization Management</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark {{ 'user-feedback' == request()->path() ? 'active' : '' }}"
-                        href="/user-feedback">
-                        <div class="text-black text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons opacity-10">format_textdirection_r_to_l</i>
-                        </div>
-                        <span class="nav-link-text ms-1">User Feedback</span>
-                    </a>
-                </li>
-                <li class="nav-item">
+                <li class="nav-item ">
                     <a class="nav-link text-dark {{ 'review-management' == request()->path() ? 'active' : '' }}"
                         href="/review-management">
                         <div class="text-black text-center me-2 d-flex align-items-center justify-content-center">

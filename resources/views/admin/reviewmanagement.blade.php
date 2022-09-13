@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('title')
-    User Management | Pursell Admin Panel
+    Review Management | Pursell Admin Panel
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@
                 <div class="card my-2">
                     <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                         <div class="shadow-primary border-radius-lg pt-4 pb-3" style="background-color: #E60000">
-                            <h6 class="text-white text-capitalize ps-3">User Management table</h6>
+                            <h6 class="text-white text-capitalize ps-3">Review Management table</h6>
                         </div>
                     </div>
                     <div class="card-body px-0 pb-2">
@@ -22,54 +22,43 @@
                                         <th class="text-center text-xxxxs font-weight-bolder opacity-7">
                                             ID</th>
                                         <th class="text-xxxxs font-weight-bolder opacity-7 ps-2">
-                                            Name</th>
+                                            Rating</th>
                                         <th class="text-xxxxs font-weight-bolder opacity-7 ps-2">
-                                            Email</th>
+                                            Review</th>
                                         <th class="text-xxxxs font-weight-bolder opacity-7 ps-2">
-                                            PhoneNo.</th>
+                                            Reviewer Name</th>
                                         <th class="text-xxxxs font-weight-bolder opacity-7 ps-2">
-                                            Report_Number</th>
-                                        <th class="opacity-7"></th>
+                                            User Name</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($users as $key)
+                                    @foreach ($reviews as $data)
                                         <tr>
                                             <td class="align-middle text-center text-sm">
-                                                {{ $key->id }}
+                                                {{ $data->id }}
                                             </td>
                                             <td class="align-middle text-sm">
-                                                {{ $key->name }}
-                                            </td>
-                                            <td class="align-middle text-sm">
-                                                {{ $key->email }}
-                                            </td>
-                                            <td class="align-middle text-sm">
-                                                {{ $key->phoneno }}
-                                            </td>
+                                                {{ $data->rating }}
 
-                                            <td class="align-middle text-sm">
-                                                {{ $key->report_count }}
+                                                {{-- @php $ratenum = number_format($rating_value) @endphp
+                                                <div class="rating p-0">
+                                                    @for ($i = 1; $i <= $ratenum; $i++)
+                                                        <i class="bi bi-star-fill checked"></i>
+                                                    @endfor
+                                                    @for ($j = $ratenum + 1; $j <= 5; $j++)
+                                                        <i class="bi bi-star-fill" style="color: lightgray;"></i>
+                                                    @endfor
+                                                </div> --}}
+
                                             </td>
-
-
-                                            <td>
-                                                <form action="{{ url('user-manage-block/' . $key->id) }}" method="POST">
-                                                    {{ csrf_field() }}
-                                                    {{ method_field('POST') }}
-                                                    <input id="userId" name="id" type="hidden"
-                                                        value="{{ $key->id }}" />
-                                                    <button type="submit"
-                                                        class="<?php if ($key->block_status == false) {
-                                                            echo 'btn btn-danger my-2';
-                                                        } else {
-                                                            echo 'btn btn-success my-2';
-                                                        } ?>"><?php if ($key->block_status == false) {
-                                                            echo 'Block';
-                                                        } else {
-                                                            echo 'UnBlock';
-                                                        } ?></button>
-                                                </form>
+                                            <td class="align-middle text-sm">
+                                                {{ $data->review }}
+                                            </td>
+                                            <td class="align-middle text-sm">
+                                                {{ $data->reviewer->name }}
+                                            </td>
+                                            <td class="align-middle text-sm">
+                                                {{ $data->user->name }}
                                             </td>
                                         </tr>
                                     @endforeach

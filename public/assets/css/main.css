@@ -1,0 +1,9 @@
+.navbar-nav > .active > a {
+    background-color: #e60000;
+    color: white;
+}
+
+/* .navbar-nav > .active > a :hover{
+    background-color: #e60000;
+    color: white;
+} */

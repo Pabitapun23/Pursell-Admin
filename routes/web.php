@@ -38,4 +38,6 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/organization-management/{id}', [App\Http\Controllers\Admin\OrganizationManagementController::class, 'edit']);
     Route::put('/organization-management-update/{id}', [App\Http\Controllers\Admin\OrganizationManagementController::class, 'update']);
     Route::delete('/organization-management-delete/{id}', [App\Http\Controllers\Admin\OrganizationManagementController::class, 'delete']);
+
+    Route::get('/review-management', [App\Http\Controllers\Admin\ReviewManagementController::class, 'reviewData']);
 });

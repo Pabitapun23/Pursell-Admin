@@ -52,4 +52,14 @@ class User extends Authenticatable
     {
         return $this->hasMany(Category::class, 'category_id');
     }
+
+    public function rate_and_review()
+    {
+        return $this->hasMany(RateAndReview::class, 'user_id');
+    }
+
+    public function report_user()
+    {
+        return $this->hasMany(ReportUser::class, 'user_id');
+    }
 }
