@@ -9,6 +9,9 @@ A Web Application for an online marketplace that enables users to purchase or se
 * Rabita Chhantyal
 * Bikalpa K.C.
 
+## Project Demo
+https://github.com/Pabitapun23/Pursell-Admin/assets/34096681/4f8a4a3a-a6d5-43cb-9c37-4a7434a5bf6e
+
 
 ## Technologies
 We used the following tools and technologies to develop this app:
